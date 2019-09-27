@@ -29,10 +29,11 @@ test:
   imports:
     - passlib
     - passlib._setup
-    # Uncomment this when you switch back to >=1.7.1
-    #- passlib.crypto
-    #- passlib.crypto._blowfish
-    #- passlib.crypto.scrypt
+    {% if version >= "1.7.1" %}
+    - passlib.crypto
+    - passlib.crypto._blowfish
+    - passlib.crypto.scrypt
+    {% endif %}
     - passlib.ext
     - passlib.ext.django
     - passlib.handlers
