@@ -3,7 +3,7 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "8d666cef936198bc2ab47ee9b0410c94adf2ba798e5a84bf220be079ae7ab6a8" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,7 @@ requirements:
 
   run:
     - python
-    - argon2_cffi >=16.2
+    - argon2-cffi >=19.2.0
     - bcrypt >=3.1.0
     - cryptography
 
