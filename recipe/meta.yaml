@@ -1,9 +1,8 @@
 {% set name = "passlib" %}
-{% set version = "1.7.2" %}
+{% set version = "1.7.3" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "8d666cef936198bc2ab47ee9b0410c94adf2ba798e5a84bf220be079ae7ab6a8" %}
-{% set build = 1 %}
+{% set hash = "0fe8b86a900b2885fed00cf5e96f040c7abd61496d65dec4c814e462f8499d8a" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +11,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
@@ -49,7 +48,7 @@ about:
   license_file: LICENSE
   license: BSD 3-Clause
   license_family: BSD
-  summary: 'comprehensive password hashing framework supporting over 30 schemes'
+  summary: comprehensive password hashing framework supporting over 30 schemes
   dev_url: https://bitbucket.org/ecollins/passlib/src
   doc_url: https://bitbucket.org/ecollins/passlib/wiki/Home
 
