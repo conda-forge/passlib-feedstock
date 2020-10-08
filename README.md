@@ -5,11 +5,13 @@ Home: https://bitbucket.org/ecollins/passlib
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/passlib-feedstock/blob/master/LICENSE.txt)
 
 Summary: comprehensive password hashing framework supporting over 30 schemes
 
+Development: https://bitbucket.org/ecollins/passlib/src
 
+Documentation: https://bitbucket.org/ecollins/passlib/wiki/Home
 
 Current build status
 ====================
