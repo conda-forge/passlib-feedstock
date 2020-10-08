@@ -1,7 +1,7 @@
 {% set name = "passlib" %}
-{% set version = "1.7.3" %}
+{% set version = "1.7.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "0fe8b86a900b2885fed00cf5e96f040c7abd61496d65dec4c814e462f8499d8a" %}
+{% set hash = "defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04" %}
 {% set build = 0 %}
 
 package:
