@@ -16,15 +16,15 @@ source:
 build:
   noarch: python
   number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
-    - python
+    - python >=3.8
     - setuptools
 
   run:
-    - python
+    - python >=3.8
     - argon2-cffi >=19.2.0
     - bcrypt >=3.1.0
     - cryptography
