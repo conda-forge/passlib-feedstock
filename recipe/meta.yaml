@@ -2,7 +2,7 @@
 {% set version = "1.7.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash = "defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -46,7 +46,7 @@ test:
 about:
   home: https://bitbucket.org/ecollins/passlib
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   summary: comprehensive password hashing framework supporting over 30 schemes
   dev_url: https://bitbucket.org/ecollins/passlib/src
