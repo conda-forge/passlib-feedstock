@@ -2,7 +2,7 @@
 {% set version = "1.7.4" %}
 {% set bundle = "tar.gz" %}
 {% set hash = "defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   sha256: {{ hash }}
 
 build:
@@ -19,17 +19,19 @@ build:
   script: {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
-  build:
-    - python >=3.8
+  host:
+    - python {{ python_min }}
     - setuptools
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - argon2-cffi >=19.2.0
     - bcrypt >=3.1.0
     - cryptography
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - passlib
     - passlib._setup
