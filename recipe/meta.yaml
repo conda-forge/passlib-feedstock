@@ -1,8 +1,8 @@
 {% set name = "passlib" %}
-{% set version = "1.7.4" %}
+{% set version = "1.9.5" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04" %}
-{% set build = 2 %}
+{% set hash = "15d39a9b2044a86f341a2e443170e4e9a6d71fe0266fe28b91032a8ca723f8aa" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   sha256: {{ hash }}
 
 build:
